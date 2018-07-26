@@ -26,8 +26,8 @@ public class Assignment4_2 {
 	public static void main(String[] args) throws FileNotFoundException {
 		
 //	LOCATION OF TXT FILE IN MY CLOUD FOLDER
-		String location1 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\courseCode.txt";
-		String location2 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\courseName.txt";
+		String location1 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_2_FILES\\courseCode.txt";
+		String location2 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_2_FILES\\courseName.txt";
 		
 
 		File file1 = new File(location1);					//	CREATES AN INSTANCE OF THE OBJECT NAME FILE IN THE TXT FILE	

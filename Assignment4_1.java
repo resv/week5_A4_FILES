@@ -25,7 +25,7 @@ public class Assignment4_1 {
 	public static void main(String[] args) throws FileNotFoundException {
 		
 //	LOCATION OF TXT FILE IN MY CLOUD FOLDER
-			String location = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\hello.txt"; 
+			String location = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_1_FILES\\hello.txt"; 
 
 			File file = new File(location);		//	CREATES AN INSTANCE OF THE OBJECT NAME FILE IN THE TXT FILE	
 			Scanner reader = new Scanner(file); //	OPENS SCANNER
