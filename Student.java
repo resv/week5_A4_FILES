@@ -19,18 +19,46 @@ package week5_A4_FILES;
 
 public class Student {
 
-	private String name;
-	private char grade;
-	private double gpa;
-	
-	
-	
-	
+//	INITIALIZE VARIABLES
+		private String name;
+		private char grade;
+		private double gpa;
+		
+//	SETTERS AND GETTERS
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public char getGrade() {
+			return grade;
+		}
+		public void setGrade(char grade) {
+			this.grade = grade;
+		}
+		public double getGpa() {
+			return gpa;
+		}
+		public void setGpa(double gpa) {
+			this.gpa = gpa;
+		}
+
+
+//	MAIN --------------------------------------------------------------
+
 	public static void main(String[] args) {
 
 	Student student1 = new Student();
-	Student student1 = new Student();
-	Student student1 = new Student();	
+	Student student2 = new Student();
+	Student student3 = new Student();	
+	
+	String location1 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\name.txt";
+	String location2 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\grade.txt";
+	String location3 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\gpa.txt";
+	
+	
+	
 	
 	}
 }
