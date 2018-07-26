@@ -17,6 +17,11 @@
 
 package week5_A4_FILES;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Student {
 
 //	INITIALIZE VARIABLES
@@ -47,18 +52,33 @@ public class Student {
 
 //	MAIN --------------------------------------------------------------
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
-	Student student1 = new Student();
-	Student student2 = new Student();
-	Student student3 = new Student();	
+	Student student = new Student();
 	
-	String location1 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\name.txt";
-	String location2 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\grade.txt";
-	String location3 = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\gpa.txt";
+	String nameFile = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\name";
+	String gradeFile = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\grade";
+	String gpaFile = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_3FILES\\gpa";
+	
+	File nameFile = new File(nameFile);	
+	File gradeFile = new File(gradeFile);	
+	File gpaFile = new File(gpaFile);
+	
+	FileWriter nameWriter = new FileWriter(nameFile, true);
+	FileWriter gradeWriter = new FileWriter(gradeFile, false);
+	FileWriter gpaWriter = new FileWriter(gpaFile, false);
+	
+	System.out.println("I will write the student's name, grade, and GPA in 3 seperate files.");
+	System.out.println("What is the student's name ?");
+	Scanner reader = new Scanner(System.in);
+	String name = reader.nextLine();
+	student.setName(name);
+	System.out.println(student.getName());
 	
 	
 	
+	nameWriter.write(student.getName());
+	nameWriter.close();
 	
 	}
 }
