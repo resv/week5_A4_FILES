@@ -27,4 +27,8 @@ public class Student2 {
 			this.gpa = gpa;
 		}
 
+		void getInfo() {
+			System.out.println("My name is " + this.name + "and I have a " + this.gpa + ". For now, at least...");
+		}
+		
 }
