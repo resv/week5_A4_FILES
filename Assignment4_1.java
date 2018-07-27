@@ -31,7 +31,7 @@ public class Assignment4_1 {
 			Scanner reader = new Scanner(file); //	OPENS SCANNER
 			
 
-			String data;  					//	ASSIGN DATA VARIABLE TO EVERY NEXT DATA SLOT
+			String data;  						//	ASSIGN DATA VARIABLE TO EVERY NEXT DATA SLOT
 			while (reader.hasNextLine()) {  	//	WHILE LOOP TO CONTINUE IF THERE IS A NEXT LINE
 				data = reader.nextLine();
 				System.out.println(data); 		//	PRINTS OUT DATA VARIABLE INTO CONSOLE
