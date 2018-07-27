@@ -17,16 +17,15 @@
 package week5_A4_FILES;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.FileWriter;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Assignment4_4 {
 
-		public static void main(String[] args) throws IOException {
+		public static void main(String[] args) throws FileNotFoundException {
 
 //	INITIALIZE STUDENT CLASS
-			Student2 student = new Student2();
 			
 //	FILE CONSTRUCTORS		
 			File nameFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
@@ -39,7 +38,6 @@ public class Assignment4_4 {
 																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_4_FILES\\gpa.txt");
 			
 //	INITIALIZE ALL READERS INSTANCES IN THE FILE LOCATIONS		
-		
 			Scanner nameReader = new Scanner(nameFile);
 			Scanner gradeReader = new Scanner(gradeFile);
 			Scanner gpaReader = new Scanner(gpaFile);
@@ -47,21 +45,37 @@ public class Assignment4_4 {
 //	WELCOME MSG		
 			System.out.println("I will gather Name + Grade + GPA, from 3 different files and print them out together!");
 			
+//	INITIALIZE ARRAYLISTS
+			ArrayList<String> nameList = new ArrayList<String>();
+			ArrayList<String> gradeList = new ArrayList<String>();
+			ArrayList<Double> gpaList = new ArrayList<Double>(); 
+			Student2[] studentArr = new Student2[10];
+							
+//	WHILE LOOP TO GET NAME, GRADE, GPA and INSERT TO THE INDEX OF THE ARRAYLISTS
+			while (nameReader.hasNextLine()) {
+				String name = nameReader.nextLine();
+				nameList.add(name);
+			}
 		
-			String name = reader.nextLine();
-			student.setName(name);
-			nameWriter.write(student.getName());
+			while (gradeReader.hasNextLine()) {
+				String grade = gradeReader.nextLine();
+				gradeList.add(grade);
+			}
+				
+			while (gpaReader.hasNextLine()) {
+				double gpa = gpaReader.nextDouble();
+				gpaList.add(gpa);
+			}
+				
+//USING FOR LOOP TO ADD EACH ELEMENT OF THE ARRAYLISTS TO ONE STUDENT ARRAY
+	System.out.println("First, printing from ArrayLists, adding ArrayList elements into Array, then implementing getInfo() per loop");
+		for (int i = 0; i < studentArr.length; i++){
+			/* USED FOR TESTING
+			System.out.println("Name: " + nameList.get(i) + " / Grade: " + gradeList.get(i) + " / GPA: " + gpaList.get(i)); */
+			studentArr[i] = new Student2(nameList.get(i), gradeList.get(i), gpaList.get(i));
+			studentArr[i].getInfo();   /*CALLING METHOD PER LOOP*/
+		}
 		
-			
-			String grade = reader.nextLine();
-			student.setGrade(grade);
-			gradeWriter.write(student.getGrade());
-		
-
-			double gpa = reader.nextDouble();
-			student.setGpa(gpa);
-			gpaWriter.write(Double.toString(student.getGpa()));
-			
 //	CLOSES ALL READERS
 			nameReader.close();
 			gradeReader.close();

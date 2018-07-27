@@ -7,7 +7,15 @@ public class Student2 {
 		private String grade;
 		private double gpa;
 		
-//	SETTERS AND GETTERS
+		public Student2(String name, String grade, double gpa) {
+			super();
+			this.name = name;
+			this.grade = grade;
+			this.gpa = gpa;
+		}
+
+
+		//	SETTERS AND GETTERS
 		public String getName() {
 			return name;
 		}
@@ -27,8 +35,8 @@ public class Student2 {
 			this.gpa = gpa;
 		}
 
-		void getInfo() {
-			System.out.println("My name is " + this.name + "and I have a " + this.gpa + ". For now, at least...");
+		public void getInfo() {
+			System.out.println("My name is " + this.name + " and I have a " + this.gpa + " GPA. For now, at least...");	
 		}
 		
 }
