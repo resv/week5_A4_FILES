@@ -38,38 +38,33 @@ public class Assignment4_4 {
 			File gpaFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
 																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_4_FILES\\gpa.txt");
 			
-//	INITIALIZE ALL WRITER INSTANCES IN THE FILE LOCATIONS		
-			FileWriter nameWriter = new FileWriter(nameFile, false);
-			FileWriter gradeWriter = new FileWriter(gradeFile, false);
-			FileWriter gpaWriter = new FileWriter(gpaFile, false);
+//	INITIALIZE ALL READERS INSTANCES IN THE FILE LOCATIONS		
+		
+			Scanner nameReader = new Scanner(nameFile);
+			Scanner gradeReader = new Scanner(gradeFile);
+			Scanner gpaReader = new Scanner(gpaFile);
 			
 //	WELCOME MSG		
-			Scanner reader = new Scanner(System.in);
-			System.out.println("I will write the student's name, grade, and GPA in 3 seperate files.");
+			System.out.println("I will gather Name + Grade + GPA, from 3 different files and print them out together!");
 			
-//	GETS NAME, SETS VALUE TO STUDENT INSTANCE, THEN WRITES VALUE INTO FILE			
-			System.out.println("What is the student's name ?");	
+		
 			String name = reader.nextLine();
 			student.setName(name);
 			nameWriter.write(student.getName());
 		
-//	GETS GRADE, SETS VALUE TO STUDENT INSTANCE, THEN WRITES VALUE INTO FILE			
-			System.out.println("What is the student's grade?");
+			
 			String grade = reader.nextLine();
 			student.setGrade(grade);
 			gradeWriter.write(student.getGrade());
 		
-//	GETS GPA, SETS VALUE TO STUDENT INSTANCE, THEN WRITES VALUE INTO FILE
-			System.out.println("What is the student's GPA?");
+
 			double gpa = reader.nextDouble();
 			student.setGpa(gpa);
 			gpaWriter.write(Double.toString(student.getGpa()));
 			
-//	CLOSES CONSOLE READER
-			reader.close();
-//	CLOSES ALL WRITERS
-			nameWriter.close();
-			gradeWriter.close();
-			gpaWriter.close();
+//	CLOSES ALL READERS
+			nameReader.close();
+			gradeReader.close();
+			gpaReader.close();
 		}
 }
