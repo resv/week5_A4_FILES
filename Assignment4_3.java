@@ -40,9 +40,9 @@ public class Assignment4_3 {
 																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_3_FILES\\gpa.txt");
 			
 //	INITIALIZE ALL WRITER INSTANCES IN THE FILE LOCATIONS		
-			FileWriter nameWriter = new FileWriter(nameFile, true);
-			FileWriter gradeWriter = new FileWriter(gradeFile, true);
-			FileWriter gpaWriter = new FileWriter(gpaFile, true);
+			FileWriter nameWriter = new FileWriter(nameFile, false);
+			FileWriter gradeWriter = new FileWriter(gradeFile, false);
+			FileWriter gpaWriter = new FileWriter(gpaFile, false);
 			
 //	WELCOME MSG		
 			Scanner reader = new Scanner(System.in);

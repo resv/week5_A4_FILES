@@ -30,13 +30,13 @@ public class Assignment4_4 {
 			
 //	FILE CONSTRUCTORS		
 			File nameFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
-																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_3_FILES\\name.txt");	
+																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_4_FILES\\name.txt");	
 			
 			File gradeFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
-																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_3_FILES\\grade.txt");	
+																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_4_FILES\\grade.txt");	
 			
 			File gpaFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
-																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_3_FILES\\gpa.txt");
+																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_4_FILES\\gpa.txt");
 			
 //	INITIALIZE ALL WRITER INSTANCES IN THE FILE LOCATIONS		
 			FileWriter nameWriter = new FileWriter(nameFile, false);
