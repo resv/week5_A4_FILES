@@ -28,7 +28,6 @@ package week5_A4_FILES;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -43,7 +42,7 @@ public class Assignment4_5 {
 		
 //	INITIALIZING SCANNER	
 		Scanner csvReader = new Scanner(csvFile);
-		
+	
 //	WHILE LOOP TO READ FILE
 		while (csvReader.hasNextLine()) {
 			ArrayList<String[]> list = new ArrayList<String[]>(); /*CREATES ARRAYLIST TO STORE INFORMATION READ*/
@@ -54,15 +53,19 @@ public class Assignment4_5 {
 					
 //					System.out.println(d[0] + " " + d[1]  + " " + d[2]);      													/*TESTING DATA EXISTS IN ARRAY LIST*/
 					
-					Student3 student = new Student3(d[0],d[1],Double.valueOf(d[2]));   /*CREATING OBJECT AND STORING VALUES*/
+					Student3 student = new Student3(d[i],d[i+1],Double.valueOf(d[i+2]));   /*CREATING OBJECT AND STORING VALUES*/
 					
 //					System.out.println(student.getName() + " " + student.getGrade() + " " + student.getGpa()); 					/*TESTING DATA EXISTS IN STUDENT OBJECT FROM ARRAY LIST*/
-				
-					ArrayList<Student3> objects = new ArrayList<Student3>();
 					
-					objects.add(student);
+					ArrayList<Student3> studList = new ArrayList<Student3>();   /*CREATING ARRAYLIST OF TYPE STUDENT3 TO STORE OBJECTS INTO*/
 					
-					getInfo(objects.get(0));
+					studList.add(student);										/*ADDING OBJECTS INTO ARRAYLIST*/
+					
+					for (int k = 0; k < studList.size(); k++) {					/*FOR LOOP TO EXECUTE METHOD USING THE ARRAYLIST ELEMENT*/
+//						System.out.println(studList.get(k));					/*TESTING TO SEE IF WE CAN CALL FROM ARRAYLIST INDEX*/
+						studList.get(k).getInfo();
+						
+					}
 				}
 			}
 		}
