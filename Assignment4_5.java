@@ -45,24 +45,24 @@ public class Assignment4_5 {
 	
 //	WHILE LOOP TO READ FILE
 		while (csvReader.hasNextLine()) {
-			ArrayList<String[]> list = new ArrayList<String[]>();	/*CREATES ARRAYLIST TO STORE INFORMATION READ*/
-			String data = csvReader.nextLine();						/* PUTS THE INFORMATION INTO A VARIABLE*/
-			list.add(data.split(","));								/*VARIABLE IS SPLIT BY ",", ADDED INTO ARRAY LIST*/
-			for (int i = 0; i < list.size();i++) {					/*FOR LOOP TO ITERATE THROUGH THE MANY PROCEDURES BELOW*/
-				for (String[] d : list) {							/*ITERATING THOUGH THE ARRAY LIST*/
+			ArrayList<String[]> list = new ArrayList<String[]>(); /*CREATES ARRAYLIST TO STORE INFORMATION READ*/
+			String data = csvReader.nextLine(); /* PUTS THE INFORMATION INTO A VARIABLE*/
+			list.add(data.split(",")); /*VARIABLE IS SPLIT BY ",", ADDED INTO ARRAY LIST*/
+			for (int i = 0; i < list.size();i++) { /*FOR LOOP TO ITERATE THROUGH THE MANY PROCEDURES BELOW*/
+				for (String[] d : list) { /*ITERATING THOUGH THE ARRAY LIST*/
 					
-//					System.out.println(d[0] + " " + d[1]  + " " + d[2]);					/*TESTING DATA EXISTS IN ARRAY LIST*/
+//					System.out.println(d[0] + " " + d[1]  + " " + d[2]); /*TESTING DATA EXISTS IN ARRAY LIST*/
 					
-					Student3 student = new Student3(d[i],d[i+1],Double.valueOf(d[i+2]));	/*CREATING OBJECT AND STORING VALUES*/
+					Student3 student = new Student3(d[i],d[i+1],Double.valueOf(d[i+2])); /*CREATING OBJECT AND STORING VALUES*/
 					
-//					System.out.println(student.getName() + " " + student.getGrade() + " " + student.getGpa());		/*TESTING DATA EXISTS IN STUDENT OBJECT FROM ARRAY LIST*/
+//					System.out.println(student.getName() + " " + student.getGrade() + " " + student.getGpa()); /*TESTING DATA EXISTS IN STUDENT OBJECT FROM ARRAY LIST*/
 					
-					ArrayList<Student3> studList = new ArrayList<Student3>();	/*CREATING ARRAYLIST OF TYPE STUDENT3 TO STORE OBJECTS INTO*/
+					ArrayList<Student3> studList = new ArrayList<Student3>(); /*CREATING ARRAYLIST OF TYPE STUDENT3 TO STORE OBJECTS INTO*/
 					
-					studList.add(student);										/*ADDING OBJECTS INTO ARRAYLIST*/
+					studList.add(student); /*ADDING OBJECTS INTO ARRAYLIST*/
 					
-					for (int k = 0; k < studList.size(); k++) {					/*FOR LOOP TO EXECUTE METHOD USING THE ARRAYLIST ELEMENT*/
-//						System.out.println(studList.get(k));					/*TESTING TO SEE IF WE CAN CALL FROM ARRAYLIST INDEX*/
+					for (int k = 0; k < studList.size(); k++) { /*FOR LOOP TO EXECUTE METHOD USING THE ARRAYLIST ELEMENT*/
+//						System.out.println(studList.get(k)); /*TESTING TO SEE IF WE CAN CALL FROM ARRAYLIST INDEX*/
 						studList.get(k).getInfo();
 					}
 				}
