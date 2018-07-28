@@ -30,8 +30,15 @@ public class Assignment4_3 {
 			Student1 student = new Student1();
 			
 //	FILE CONSTRUCTORS		
-			File nameFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
-																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_3_FILES\\name.txt");	
+//			File nameFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
+//																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_3_FILES\\name.txt");	
+			
+			String directory = "C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE";
+			String source = ("\\src\\week5_A4_FILES\\FILE_BANK");
+			String specific = ("4_3_FILES\\name.txt");
+			
+			File nameFile = new File(directory + source + specific);	
+			
 			
 			File gradeFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE"
 																+ "\\src\\week5_A4_FILES\\FILE_BANK\\4_3_FILES\\grade.txt");	
