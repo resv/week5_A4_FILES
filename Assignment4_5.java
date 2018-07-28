@@ -28,37 +28,45 @@ package week5_A4_FILES;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+
 
 public class Assignment4_5 {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		
-//		File csvFile = new File("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK\\4_5_FILES\\students.csv");
-		
+
+//	INITIALIZING FILE	
 		String directory = ("C:\\Users\\akim4\\Google Drive\\CODE\\JAVAPROGRAMS\\PERSCHOLAS PLATFORM JD WORKSPACE\\src\\week5_A4_FILES\\FILE_BANK");
 		String specific = ("\\4_5_FILES\\students.csv");
 		File csvFile = new File(directory + specific);
 		
-		
+//	INITIALIZING SCANNER	
 		Scanner csvReader = new Scanner(csvFile);
 		
-		ArrayList<String[]> list = new ArrayList<String[]>();
-		
-//	TESTING FOR DATA IN DOCUMENT
+//	WHILE LOOP TO READ FILE
 		while (csvReader.hasNextLine()) {
-			String data = csvReader.nextLine();
-			list.add(data.split(","));
-			System.out.println(data);
+			ArrayList<String[]> list = new ArrayList<String[]>(); /*CREATES ARRAYLIST TO STORE INFORMATION READ*/
+			String data = csvReader.nextLine();					  /* PUTS THE INFORMATION INTO A VARIABLE*/
+			list.add(data.split(","));							  /*VARIABLE IS SPLIT BY ",", ADDED INTO ARRAY LIST*/
+			for (int i = 0; i < list.size();i++) {				  /*FOR LOOP TO ITERATE THROUGH THE MANY PROCEDURES BELOW*/
+				for (String[] d : list) {				          /*ITERATING THOUGH THE ARRAY LIST*/
+					
+//					System.out.println(d[0] + " " + d[1]  + " " + d[2]);      													/*TESTING DATA EXISTS IN ARRAY LIST*/
+					
+					Student3 student = new Student3(d[0],d[1],Double.valueOf(d[2]));   /*CREATING OBJECT AND STORING VALUES*/
+					
+//					System.out.println(student.getName() + " " + student.getGrade() + " " + student.getGpa()); 					/*TESTING DATA EXISTS IN STUDENT OBJECT FROM ARRAY LIST*/
+				
+					ArrayList<Student3> objects = new ArrayList<Student3>();
+					
+					objects.add(student);
+					
+					getInfo(objects.get(0));
+				}
+			}
 		}
-		
-		
-		System.out.println("Data in array printed below : ");
-		
-		for (String[] newData : list) {
-			System.out.println(newData[0] + " " + newData[1] + " " + newData[2]);
-		}
-		
+//	CLOSING READER
 		csvReader.close();
 	}
 }
