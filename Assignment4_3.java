@@ -18,8 +18,8 @@
 package week5_A4_FILES;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Assignment4_3 {
